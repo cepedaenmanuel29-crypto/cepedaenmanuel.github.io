@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Practice</title>
+
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .large-type {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Practice</h1>
+    <h2>Programming Quotes</h2>
+
+    <blockquote>
+        "The use of COBOL cripples the mind; its teaching should, therefore,
+        be regarded as a <span class="bold">criminal offense</span>."<br>
+        -- Edsgar Dijkstra
+    </blockquote>
+
+    <blockquote>
+        "Man is the best computer we can put aboard a spacecraft
+        and the only one that can be <span class="italic">mass produced</span>
+        with unskilled labor."<br>
+        -- Wernher von Braun
+    </blockquote>
+
+    <blockquote class="large-type">
+        "C makes it easy to shoot yourself in the foot; C++ makes
+        it harder, but when you do, it blows away your whole leg."<br>
+        -- Bjarne Stroustrup
+    </blockquote>
+</body>
+</html>
