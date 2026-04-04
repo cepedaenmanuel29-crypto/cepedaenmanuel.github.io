@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Explanation - Rainbow Generator</title>
+</head>
+<body>
+
+    <h1>Explaining the Rainbow Generator Program</h1>
+
+    <p>
+        This page explains a simple <strong>JavaScript</strong> program designed to simulate how light disperses into colors. 
+        The program uses a <dfn>loop</dfn> to iterate through an array of color strings. 
+        As the <cite>Atmospheric Optics Handbook</cite> states: <q>Light is not just white; it is a spectrum waiting to be revealed.</q>
+    </p>
+
+    <h3>The Code Fragment</h3>
+    <p>Below is the logic used to display the colors:</p>
+    
+    <pre>
+<code>
+let colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
+let target = "Violet"; 
+
+function showColors(list) {
+    list.forEach(c => console.log("Color: " + c));
+}
+</code>
+    </pre>
+
+    <h3>Analysis</h3>
+    <p>
+        In this program, the <var>colors</var> variable holds the array of data. 
+        The specific <b>input</b> is the <code>list</code> passed into the function, 
+        and the <b>output</b> is a sequence of strings printed to the console. 
+        To make it work, you simply press <kbd>Enter</kbd> after typing the function call.
+    </p>
+
+    <p>
+        We use the acronym <abbr title="Keep It Simple, Stupid">KISS</abbr> when writing this logic. 
+        If the code fails, the computer might return a <samp>ReferenceError</samp>. 
+        It is <mark>critical</mark> to define your variables before calling them! 
+        <i>Physics and programming both require precision.</i> 
+        Finally, remember that <small>proper syntax is mandatory</small> for the script to run.
+    </p>
+
+    <p>Reference: <u>Smith, J. (2024). The Basics of Light. Science Press.</u></p>
+
+</body>
+</html>
