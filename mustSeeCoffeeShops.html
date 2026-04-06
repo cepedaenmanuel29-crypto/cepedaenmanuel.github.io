@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Must-See Coffee Shops</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Navegación superior */
+        nav {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0044cc;
+        }
+
+        nav a {
+            text-decoration: none; /* Quitar subrayado */
+            color: #0044cc;
+            padding: 2px 5px;
+        }
+
+        /* Efecto Hover solicitado: fondo plateado */
+        nav a:hover {
+            background-color: silver;
+        }
+
+        /* Imagen principal */
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        /* Configuración de GRID para la lista de ciudades */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 150px 1fr; /* Columna fija para ciudad, resto para links */
+            gap: 20px;
+            max-width: 800px;
+            align-items: start;
+        }
+
+        .city-name {
+            font-size: 1.5rem;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .venue-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .venue-links a {
+            color: #0044cc;
+            text-decoration: underline; /* Los links de abajo sí suelen ir subrayados */
+            margin-bottom: 5px;
+        }
+
+        .venue-links a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Must-See Coffee Shops</h1>
+
+    <nav>
+        <a href="#new-york">New York</a> | 
+        <a href="#chicago">Chicago</a> | 
+        <a href="#kansas-city">Kansas City</a>
+    </nav>
+
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" 
+         alt="Coffee Shop" class="hero-image">
+
+    <div class="grid-container">
+        
+        <div id="new-york" class="city-name">New York:</div>
+        <div class="venue-links">
+            <a href="https://www.bluebottlecoffee.com" target="_blank">Blue Bottle Coffee</a>
+            <a href="https://www.stump-towncoffee.com" target="_blank">Stumptown Coffee Roasters</a>
+        </div>
+
+        <div id="chicago" class="city-name">Chicago:</div>
+        <div class="venue-links">
+            <a href="https://www.intelligentsiacoffee.com" target="_blank">Intelligentsia Coffee</a>
+            <a href="https://www.sawada-coffee.com" target="_blank">Sawada Coffee</a>
+        </div>
+
+        <div id="kansas-city" class="city-name">Kansas City:</div>
+        <div class="venue-links">
+            <a href="https://www.messengercoffee.co" target="_blank">Messenger Coffee Co.</a>
+            <a href="https://www.theroasterie.com" target="_blank">The Roasterie</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
