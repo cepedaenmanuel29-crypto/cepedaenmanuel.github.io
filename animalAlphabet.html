@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Abecedario de Animales</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1998/1998344.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Chalkboard+SE&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+            background-color: #f0fdf4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        /* Navegación solicitada: A | B | C | D | E */
+        nav {
+            font-size: 2rem;
+            word-spacing: 15px;
+        }
+
+        nav a {
+            text-decoration: none; /* Sin subrayado */
+            color: #2b6cb0;
+            padding: 5px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        /* Efecto Hover solicitado: cambio de color de fondo */
+        nav a:hover {
+            background-color: #fbd38d;
+            color: #c05621;
+        }
+
+        /* Layout de GRID: 3 celdas por fila */
+        .alphabet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .animal-card {
+            background: white;
+            border: 3px solid #bbf7d0;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .animal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 10px 0;
+        }
+
+        .animal-name {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #2f855a;
+        }
+
+        .under-construction {
+            font-style: italic;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .back-to-top {
+            text-decoration: none;
+            color: #2b6cb0;
+            font-weight: bold;
+            border: 2px solid #2b6cb0;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .back-to-top:hover {
+            background: #2b6cb0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="top">
+        <h1>🐾 Mi Alfabeto de Animales 🐾</h1>
+        <nav>
+            <a href="#A">A</a> | <a href="#B">B</a> | <a href="#C">C</a> | <a href="#D">D</a> | <a href="#E">E</a>
+        </nav>
+    </header>
+
+    <main class="alphabet-grid">
+        
+        <section id="A" class="animal-card">
+            <div class="animal-name">A de Abeja</div>
+            <img src="https://images.unsplash.com/photo-1558537348-c0f8e733989d?w=400" alt="Abeja">
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+        </section>
+
+        <section id="B" class="animal-card">
+            <div class="animal-name">B de Ballena</div>
+            <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=400" alt="Ballena">
+            <p class="under-construction">🚧 Sonido bajo construcción 🚧</p>
+        </section>
+
+        <section id="C" class="animal-card">
+            <div class="animal-name">C de Cebra</div>
+            <img src="https://images.unsplash.com/photo-1501705388883-4ed8a543392c?w=400" alt="Cebra">
+            <p class="under-construction">🚧 Sonido bajo construcción 🚧</p>
+        </section>
+
+        <section id="D" class="animal-card">
+            <div class="animal-name">D de Delfín</div>
+            <img src="https://images.unsplash.com/photo-1570481662006-a3a1374699e8?w=400" alt="Delfín">
+            <p class="under-construction">🚧 Sonido bajo construcción 🚧</p>
+        </section>
+
+        <section id="E" class="animal-card">
+            <div class="animal-name">E de Elefante</div>
+            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400" alt="Elefante">
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#top" class="back-to-top">Ir al inicio de la página</a>
+    </footer>
+
+</body>
+</html>
