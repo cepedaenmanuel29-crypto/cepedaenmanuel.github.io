@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pope Francis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            margin: 20px;
+        }
+
+        /* Fondo azul claro para el header */
+        header {
+            background-color: #d1e7ff;
+            padding: 10px 20px;
+        }
+
+        /* REQUERIMIENTO ESPECIAL: Selector de hijo para reducir el gap */
+        header > * {
+            margin: 0;
+            padding: 2px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header h2 {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* Layout con Flexbox para alinear contenido e imagen */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        article {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Estilo para las barras de título (Quotes e Interesting facts) */
+        section h3 {
+            background-color: #a3c1e0;
+            color: white;
+            padding: 5px 10px;
+            font-size: 1.2em;
+        }
+
+        figure {
+            margin: 0;
+            flex: 0 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        aside {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pope Francis I</h1>
+        <h2>Bishop of Rome, Vicar of Jesus Christ, Successor of the Prince of the Apostles, Supreme Pontiff of the Universal Church, Primate of Italy, Archbishop and Metropolitan of the Roman Province, Sovereign of the State of Vatican City, Servant of the Servants of God.</h2>
+    </header>
+
+    <div class="main-container">
+        <article>
+            <section>
+                <h3>Quotes:</h3>
+                <ul>
+                    <li>"We all have the duty to do good."</li>
+                    <li>"Money must serve, not rule."</li>
+                    <li>"I am a sinner."</li>
+                    <li>"Working for a just distribution of wealth is not mere philanthropy. It is a moral obligation."</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Interesting facts:</h3>
+                <ul>
+                    <li>Worked as a bar bouncer to pay for college.</li>
+                    <li>Washes feet of incarcerated women.</li>
+                    <li>Lives in a small apartment behind a gas station.</li>
+                    <li>Orders Domino's take-out every Thursday.</li>
+                </ul>
+            </section>
+        </article>
+
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pope_Francis_South_Korea_2014.jpg/400px-Pope_Francis_South_Korea_2014.jpg" alt="Pope Francis">
+        </figure>
+    </div>
+
+    <footer>
+        <p>Report problems to the webmaster at <a href="mailto:benedictxvi@vatican.va">benedictxvi@vatican.va</a></p>
+    </footer>
+
+</body>
+</html>
