@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child's Animal Alphabet</title>
     
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" type="image/png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" type="image/png">
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
     <style>
+        /* Estilos Generales */
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #f7fee7;
+            background-color: #fff9e6; /* Fondo crema suave */
             color: #333;
             text-align: center;
             margin: 0;
@@ -21,12 +22,12 @@
 
         h1 {
             font-family: 'Fredoka One', cursive;
-            color: #ef4444;
+            color: #ff6f61;
             font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        /* Nav: A | B | C | D | E */
+        /* Navegación solicitada: A | B | C | D | E */
         nav {
             font-size: 2rem;
             font-weight: bold;
@@ -34,33 +35,36 @@
         }
 
         nav a {
-            text-decoration: none; /* No underline */
-            color: #0ea5e9;
+            text-decoration: none; /* Sin subrayado, como pide el ejercicio */
+            color: #4db8ff;
             padding: 5px 15px;
             border-radius: 12px;
-            transition: 0.3s;
+            transition: background-color 0.3s;
         }
 
+        /* Efecto Hover solicitado: cambio de color de fondo con CSS */
         nav a:hover {
-            background-color: #facc15;
+            background-color: #ffd166;
             color: #fff;
         }
 
-        /* Grid Layout: 3 columns */
+        /* 3. CSS GRID Layout: Exactamente 3 celdas por fila */
         .alphabet-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1100px;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+            gap: 25px; /* Espacio entre tarjetas */
+            max-width: 1000px;
             margin: 0 auto;
+            text-align: center;
         }
 
+        /* Estilo de las Tarjetas de Animales */
         .animal-card {
             background: #ffffff;
-            border: 4px solid #86efac;
+            border: 4px solid #b5e48c; /* Borde verde claro */
             border-radius: 25px;
             padding: 20px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -70,51 +74,55 @@
             font-family: 'Fredoka One', cursive;
             font-size: 1.8rem;
             margin-bottom: 15px;
-            color: #1e40af;
+            color: #0077b6;
         }
 
         .animal-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            max-width: 250px;
+            height: 180px; /* Altura fija para uniformidad */
+            object-fit: cover; /* Asegura que la foto no se estire */
             border-radius: 20px;
             margin-bottom: 15px;
+            border: 2px solid #eee;
         }
 
-        audio {
-            width: 100%;
-        }
-
+        /* Estilo para el estado 'Under Construction' */
         .under-construction {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #64748b;
+            color: #999;
+            font-size: 0.9rem;
             font-style: italic;
-        }
-
-        .uc-icon {
-            width: 40px;
-            height: 40px;
             margin-top: 10px;
         }
 
+        .uc-icon {
+            width: 40px !important;
+            height: 40px !important;
+            margin-top: 5px;
+        }
+
+        /* Footer y enlace de volver arriba */
         footer {
             margin-top: 60px;
             padding-bottom: 40px;
         }
 
-        .back-top {
+        .back-to-top {
             text-decoration: none;
-            color: #ef4444;
+            color: #ff6f61;
             font-weight: bold;
-            border: 2px solid #ef4444;
+            font-size: 1.2rem;
+            border: 3px dashed #ff6f61;
             padding: 10px 25px;
             border-radius: 50px;
+            transition: 0.3s;
         }
 
-        .back-top:hover {
-            background: #ef4444;
+        .back-to-top:hover {
+            background-color: #ff6f61;
             color: white;
         }
     </style>
@@ -133,26 +141,27 @@
         <section id="A" class="animal-card">
             <div class="animal-label">Anteater</div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Giant_Anteater_05.jpg/640px-Giant_Anteater_05.jpg" alt="Anteater">
-            <audio controls>
-                <source src="https://www.zapsplat.com/wp-content/uploads/edd/animal_anteater_grunt_001.mp3" type="audio/mpeg">
-                Your browser does not support audio.
-            </audio>
+            <div class="under-construction">
+                <span>Sound Under Construction</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="Construction Icon">
+            </div>
         </section>
 
         <section id="B" class="animal-card">
             <div class="animal-label">Bear</div>
             <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=400" alt="Bear">
-            <audio controls>
-                <source src="https://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
-            </audio>
+            <div class="under-construction">
+                <span>Sound Under Construction</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="Construction Icon">
+            </div>
         </section>
 
         <section id="C" class="animal-card">
             <div class="animal-label">Cat</div>
             <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" alt="Cat">
             <div class="under-construction">
-                <span>Under Construction</span>
-                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="UC">
+                <span>Sound Under Construction</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="Construction Icon">
             </div>
         </section>
 
@@ -160,23 +169,24 @@
             <div class="animal-label">Dog</div>
             <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400" alt="Dog">
             <div class="under-construction">
-                <span>Under Construction</span>
-                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="UC">
+                <span>Sound Under Construction</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="Construction Icon">
             </div>
         </section>
 
         <section id="E" class="animal-card">
             <div class="animal-label">Elephant</div>
             <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400" alt="Elephant">
-            <audio controls>
-                <source src="https://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
-            </audio>
+            <div class="under-construction">
+                <span>Sound Under Construction</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1869/1869685.png" class="uc-icon" alt="Construction Icon">
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <a href="#top" class="back-top">Back to the top of the page</a>
+        <a href="#top" class="back-to-top">Back to the top of the page</a>
     </footer>
 
 </body>
