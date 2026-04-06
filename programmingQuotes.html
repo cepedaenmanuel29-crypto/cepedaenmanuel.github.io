@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Practice</title>
+    <style>
+        /* 1. Selector de tipo para ambos encabezados (h1 y h2) */
+        h1, h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* 2. Reglas de selector de clase: bold e italic */
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        /* 3. Selector de clase large-type con prefijo de elemento blockquote */
+        blockquote.large-type {
+            font-size: large;
+        }
+
+        /* 4. Selector de tipo para todos los elementos blockquote */
+        blockquote {
+            padding: 10px;
+            margin: 10px 50px 10px 50px; /* Arriba, Derecha, Abajo, Izquierda */
+            border: 1px dashed red;
+            font-family: Helvetica, sans-serif;
+            text-align: justify;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>css Practice</h1>
+    <h2>Programming Quotes</h2>
+
+    <blockquote>
+        "The use of COBOL cripples the mind; its teaching should, therefore, 
+        be regarded as a <span class="bold">criminal offense</span>."<br>
+        --Edsgar Dijkstra
+    </blockquote>
+
+    <blockquote class="large-type">
+        "C makes it easy to shoot yourself in the foot; C++ makes 
+        it harder, but when you do, it blows away your whole leg."<br>
+        --Bjarne Stroustrup
+    </blockquote>
+
+    <blockquote>
+        "Man is the best computer we can put aboard a spacecraft ... 
+        and the only one that can be <span class="italic">mass produced</span> 
+        with unskilled labor."<br>
+        --Wernher von Braun
+    </blockquote>
+
+</body>
+</html>
