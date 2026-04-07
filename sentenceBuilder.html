@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Sentence Builder</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size:40px;
+}
+
+#sentence{
+    margin-top:20px;
+    font-size:32px;
+    color:#b22222;
+    font-family:cursive;
+}
+
+input{
+    width:220px;
+    height:25px;
+    font-size:16px;
+}
+
+button{
+    margin-top:10px;
+    margin-right:5px;
+    padding:5px 10px;
+}
+
+</style>
+
+<script>
+
+let sentence = "";
+
+function addWord(){
+
+    let wordBox = document.getElementById("wordBox");
+    let word = wordBox.value;      // local variable
+
+    if(sentence === "")
+        sentence = word;
+    else
+        sentence += " " + word;
+
+    document.getElementById("sentence").innerHTML = sentence;
+
+    document.getElementById("prompt").innerHTML = "Next word for your sentence:";
+
+    wordBox.value = "";
+    wordBox.focus();
+}
+
+function startOver(){
+
+    sentence = "";
+
+    document.getElementById("sentence").innerHTML = "";
+
+    document.getElementById("prompt").innerHTML = "Starting word for your sentence:";
+
+    document.getElementById("wordBox").value = "";
+    document.getElementById("wordBox").focus();
+}
+
+window.onload = function(){
+    document.getElementById("wordBox").focus();
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<noscript>
+<h2 style="color:red;">
+Warning: Your browser has JavaScript disabled. This page requires JavaScript to work.
+</h2>
+</noscript>
+
+<h1>Sentence Builder</h1>
+
+<label id="prompt">Starting word for your sentence:</label>
+
+<br><br>
+
+<input type="text" id="wordBox">
+
+<br>
+
+<button onclick="addWord()">Add Word</button>
+<button onclick="startOver()">Start Over</button>
+
+<div id="sentence"></div>
+
+</body>
+
+</html>
