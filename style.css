@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+input, select {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+/* Pink background for invalid, Green for valid */
+input:focus:invalid, select:focus:invalid {
+    background-color: pink;
+}
+
+input:valid, select:valid {
+    background-color: lightgreen;
+}
+
+#displayArea {
+    margin-top: 20px;
+    white-space: pre-wrap; /* Maintains formatting for the output */
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
