@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Create an Account</h1>
+    <p>All fields are required. Enter appropriate values in the text boxes. Select one or more security questions. Then click the Done button to review your choices.</p>
+
+    <form id="accountForm">
+        <div class="form-group">
+            <label for="fullName">Full name:</label>
+            <input type="text" id="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" 
+                   placeholder="123-456-7890" 
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label for="securityQuestions">Security questions:</label>
+            <select id="securityQuestions" multiple required size="8">
+                <option value="At what age did your childhood pet run away?">At what age did your childhood pet run away?</option>
+                <option value="What was the name of your favorite unpaid internship?">What was the name of your favorite unpaid internship?</option>
+                <option value="What is the maiden name of your best friend's maternal grandmother?">What is the maiden name of your best friend's maternal grandmother?</option>
+                <option value="What is the name of your favorite canceled TV show?">What is the name of your favorite canceled TV show?</option>
+                <option value="On what street did you lose your childlike sense of wonder?">On what street did you lose your childlike sense of wonder?</option>
+                <option value="What are you wearing?">What are you wearing?</option>
+                <option value="What sports team do you fetishize to avoid meaningful discussion?">What sports team do you fetishize to avoid meaningful discussion?</option>
+                <option value="In what year did you stop trying?">In what year did you stop trying?</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button type="button" id="doneBtn">Done</button>
+            <button type="reset" id="resetBtn">Reset</button>
+        </div>
+    </form>
+
+    <div id="displayArea"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
