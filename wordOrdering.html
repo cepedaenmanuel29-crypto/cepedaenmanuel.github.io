@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Word Ordering</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; }
-        .input-section { margin-bottom: 10px; }
-        #wordInput { width: 300px; margin-left: 5px; }
-        .buttons { margin-top: 10px; }
-        #message { color: black; margin-top: 15px; font-weight: normal; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #20335d; margin-bottom: 20px; }
+        .input-group { margin: 15px 0; }
+        #wordInput { width: 350px; padding: 3px; }
+        .buttons { margin: 15px 0; }
+        button { padding: 5px 15px; margin-right: 5px; cursor: pointer; }
+        #message { margin-top: 20px; font-weight: normal; color: black; }
     </style>
 </head>
 <body>
@@ -16,15 +18,15 @@
     <h1>Word Ordering</h1>
     <p><strong>Enter a list of words separated by spaces.</strong></p>
 
-    <div class="input-section">
+    <div class="input-group">
         <label for="wordInput">Word list:</label>
         <input type="text" id="wordInput">
     </div>
 
     <div class="buttons">
-        <button onclick="processWords('alpha')">Alphabetical</button>
-        <button onclick="processWords('reverse')">Reverse alphabetical</button>
-        <button onclick="processWords('random')">Random</button>
+        <button id="alphaBtn">Alphabetical</button>
+        <button id="reverseBtn">Reverse alphabetical</button>
+        <button id="randomBtn">Random</button>
     </div>
 
     <div id="message"></div>
