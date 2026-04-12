@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Ordering</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .input-section { margin-bottom: 10px; }
+        #wordInput { width: 300px; margin-left: 5px; }
+        .buttons { margin-top: 10px; }
+        #message { color: black; margin-top: 15px; font-weight: normal; }
+    </style>
+</head>
+<body>
+
+    <h1>Word Ordering</h1>
+    <p><strong>Enter a list of words separated by spaces.</strong></p>
+
+    <div class="input-section">
+        <label for="wordInput">Word list:</label>
+        <input type="text" id="wordInput">
+    </div>
+
+    <div class="buttons">
+        <button onclick="processWords('alpha')">Alphabetical</button>
+        <button onclick="processWords('reverse')">Reverse alphabetical</button>
+        <button onclick="processWords('random')">Random</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="wordOrdering.js"></script>
+</body>
+</html>
