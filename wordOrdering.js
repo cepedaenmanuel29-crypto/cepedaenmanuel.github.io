@@ -6,7 +6,8 @@ class WordList {
     }
 
     sortAlphabetical() {
-        this.#words.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+        // Case-insensitive sort
+        this.#words.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
     }
 
     sortReverseAlphabetical() {
@@ -15,6 +16,7 @@ class WordList {
     }
 
     sortRandom() {
+        // Fisher-Yates shuffle algorithm
         for (let i = this.#words.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [this.#words[i], this.#words[j]] = [this.#words[j], this.#words[i]];
@@ -26,38 +28,43 @@ class WordList {
     }
 }
 
-function processWords(type) {
+document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("wordInput");
     const message = document.getElementById("message");
-    const rawValue = input.value.trim();
 
-    // 1. Check if empty
-    if (rawValue === "") {
-        message.textContent = "The word list box is empty. You must enter words in it.";
-        return;
-    }
+    const process = (sortType) => {
+        const rawValue = input.value.trim();
 
-    // 2. Split and Validate characters (only letters allowed)
-    const wordsArray = rawValue.split(/\s+/);
-    const isValid = wordsArray.every(word => /^[A-Za-z]+$/.test(word));
+        // Check if empty
+        if (rawValue === "") {
+            message.textContent = "The word list box is empty. You must enter words in it.";
+            return;
+        }
 
-    if (!isValid) {
-        message.textContent = "The input is invalid. You must enter valid words in the word list box.";
-        return;
-    }
+        // Split by one or more spaces
+        const wordsArray = rawValue.split(/\s+/);
 
-    // 3. Process with WordList class
-    const myWordList = new WordList(wordsArray);
-    message.textContent = ""; // Clear errors
+        // Validate: ONLY alphabetic characters
+        const isValid = wordsArray.every(word => /^[A-Za-z]+$/.test(word));
 
-    if (type === 'alpha') {
-        myWordList.sortAlphabetical();
-    } else if (type === 'reverse') {
-        myWordList.sortReverseAlphabetical();
-    } else if (type === 'random') {
-        myWordList.sortRandom();
-    }
+        if (!isValid) {
+            message.textContent = "The input is invalid. You must enter valid words in the word list box.";
+            return;
+        }
 
-    // Update the input field with the reordered words
-    input.value = myWordList.getWords();
-}
+        // Success: Clear message and sort
+        message.textContent = "";
+        const listManager = new WordList(wordsArray);
+
+        if (sortType === 'alpha') listManager.sortAlphabetical();
+        if (sortType === 'reverse') listManager.sortReverseAlphabetical();
+        if (sortType === 'random') listManager.sortRandom();
+
+        input.value = listManager.getWords();
+    };
+
+    // Event Listeners
+    document.getElementById("alphaBtn").onclick = () => process('alpha');
+    document.getElementById("reverseBtn").onclick = () => process('reverse');
+    document.getElementById("randomBtn").onclick = () => process('random');
+});
